@@ -1,0 +1,20 @@
+#Movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 8px 0;
+  gap: 4px;
+}
+
+.sectionTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary, #f0ede6);
+  margin: 0 0 28px;
+  letter-spacing: -0.5px;
+}
+
+.sectionTitle span {
+  color: var(--accent-gold, #c9a84c);
+}

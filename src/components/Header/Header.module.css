@@ -1,0 +1,109 @@
+.Header {
+  height: 72px;
+  background: rgba(10, 10, 15, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border, rgba(201, 168, 76, 0.15));
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  gap: 32px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+}
+
+.Header > a {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(240, 237, 230, 0.6);
+  transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.Header > a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent-gold, #c9a84c);
+  transition: width 0.3s ease;
+}
+
+.Header > a:hover {
+  color: var(--accent-gold, #c9a84c);
+}
+.Header > a:hover::after {
+  width: 100%;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent-gold, #c9a84c);
+  letter-spacing: 1px;
+  margin-right: 16px;
+  white-space: nowrap;
+}
+
+.themeToggle {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 44px;
+  height: 24px;
+  background: rgba(201, 168, 76, 0.2);
+  border-radius: 12px;
+  border: 1px solid rgba(201, 168, 76, 0.4);
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s ease;
+  flex-shrink: 0;
+}
+.themeToggle::before {
+  content: '☀';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.user {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-gold, #c9a84c), var(--accent-red, #e05a3a));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #0a0a0f;
+  letter-spacing: 1px;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 0 16px rgba(201, 168, 76, 0.3);
+}
+
+.Dark {
+  background: rgba(10, 10, 15, 0.98);
+}
