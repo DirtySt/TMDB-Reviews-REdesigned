@@ -1,0 +1,65 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 40px 0 20px;
+}
+
+.pagination > button {
+  min-width: 110px;
+  height: 42px;
+  border-radius: 6px;
+  background: transparent;
+  border: 1px solid rgba(201, 168, 76, 0.4);
+  color: var(--accent-gold, #c9a84c);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.pagination > button:hover:not(:disabled) {
+  background: rgba(201, 168, 76, 0.1);
+  border-color: var(--accent-gold, #c9a84c);
+  box-shadow: 0 0 16px rgba(201, 168, 76, 0.2);
+}
+
+.pagination > button:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+.pageNum {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  color: var(--text-secondary, #9e9b94);
+}
+
+.hero {
+  padding: 32px 0 16px;
+  border-bottom: 1px solid var(--border, rgba(201, 168, 76, 0.15));
+  margin-bottom: 32px;
+}
+
+.heroTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--text-primary, #f0ede6);
+  margin: 0 0 8px;
+  letter-spacing: -1px;
+}
+
+.heroTitle span {
+  color: var(--accent-gold, #c9a84c);
+}
+
+.heroSub {
+  font-size: 14px;
+  color: var(--text-muted, #5a5870);
+  letter-spacing: 0.5px;
+}

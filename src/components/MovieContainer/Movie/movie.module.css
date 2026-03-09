@@ -1,0 +1,97 @@
+.Element {
+  width: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--bg-card, #1a1a26);
+  border: 1px solid transparent;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  margin: 12px;
+}
+
+.Element::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.Element:hover {
+  transform: translateY(-8px) scale(1.03);
+  border-color: rgba(201, 168, 76, 0.5);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.7), 0 0 20px rgba(201, 168, 76, 0.15);
+}
+
+.Element:hover::before {
+  opacity: 1;
+}
+
+.poster {
+  width: 100%;
+  aspect-ratio: 2/3;
+  overflow: hidden;
+  display: block;
+}
+
+.poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.Element:hover .poster img {
+  transform: scale(1.06);
+}
+
+.description {
+  padding: 14px 12px 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary, #f0ede6);
+  margin: 0 0 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.date {
+  font-size: 11px;
+  color: var(--text-muted, #5a5870);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 6px;
+}
+
+.ratingBadge {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-gold, #c9a84c);
+  background: rgba(201, 168, 76, 0.12);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  padding: 2px 7px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+.Dark {
+  background-color: var(--bg-card, #1a1a26);
+  color: var(--text-primary, #f0ede6);
+}
